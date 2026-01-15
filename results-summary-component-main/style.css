@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3F4FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+h1,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 736px;
+    height: 512px;
+    border-radius: 32px;
+    background-color: #FFFFFF;
+}
+
+.result-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 368px;
+    height: 512px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    background: linear-gradient(180deg, #7755FF 0%, #2F2CE9 100%);
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    height: 422px;
+    gap: 32px;
+}
+
+.result-content>h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #CAC9FF;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #4D21C9 0%, #2521C900 100%);
+}
+
+.score-container p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #CAC9FF7F;
+}
+
+.score-container span {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 16px;
+}
+
+.description h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.description p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.5px;
+    color: #CAC9FF;
+}
+
+.summary-container {
+    display: flex;
+    width: 368px;
+    height: 512px;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    height: 422px;
+    gap: 32px;
+}
+
+.summary-content>h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #303B59;
+}
+
+.summary-content .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    border-radius: 128px;
+    background: #303B59;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.summary-content .btn:hover {
+    background: linear-gradient(180deg, #7755FF 0%, #2F2CE9 100%);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 272px;
+    gap: 16px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.item-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    width: 98px;
+    height: 23px;
+}
+
+.item-label p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0px;
+}
+
+.item-score {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 72px;
+    height: 23px;
+}
+
+.item-score p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #303B597F;
+}
+
+.item-score span {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #303B59;
+}
+
+.summary-item.reaction {
+    background-color: #FFF6F6;
+}
+
+.summary-item.reaction .item-label p {
+    color: #FF5555;
+}
+
+.summary-item.memory {
+    background-color: #FFFBF4;
+}
+
+.summary-item.memory .item-label p {
+    color: #FFB21E;
+}
+
+.summary-item.verbal {
+    background-color: #F2FCF9;
+}
+
+.summary-item.verbal .item-label p {
+    color: #00BB8F;
+}
+
+.summary-item.visual {
+    background-color: #F3F4FD;
+}
+
+.summary-item.visual .item-label p {
+    color: #1125D6;
+}
+
+@media screen and (max-width:960px) and (min-width:700px) {
+    .container {
+        width: 686px;
+    }
+
+    .result-container {
+        width: 338px;
+    }
+
+    .result-content {
+        width: 200px;
+    }
+
+    .summary-container {
+        width: 348px;
+    }
+
+    .summary-content {
+        width: 268px;
+    }
+
+
+}
+
+@media screen and (max-width:699px) {
+    .container {
+        border-radius: 0px;
+        width: 375px;
+        height: 799px;
+        flex-direction: column;
+    }
+
+    .result-container {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+        width: 375px;
+        height: 356px;
+    }
+
+    .result-content {
+        width: 260px;
+        height: 292px;
+        gap: 24px;
+    }
+
+    .result-content>h1 {
+        font-size: 18px;
+    }
+
+    .score-container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .score-container p {
+        font-size: 16px;
+    }
+
+    .score-container span {
+        font-size: 56px;
+    }
+
+    .description {
+        gap: 7px;
+    }
+
+    .description h1 {
+        font-size: 24px;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+
+    .summary-container {
+        width: 375px;
+        height: 447px;
+    }
+
+    .summary-content {
+        width: 315px;
+        height: 399px;
+    }
+
+    .summary-content>h1 {
+        font-size: 18px;
+    }
+
+    .item-label p {
+        font-size: 16px;
+    }
+
+    .item-score p,
+    .item-score span {
+        font-size: 16px;
+    }
+
+}
